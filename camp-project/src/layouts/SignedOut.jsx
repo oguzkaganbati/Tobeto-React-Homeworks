@@ -1,13 +1,14 @@
 import React from "react";
-import { Button, Menu } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
+import "./customStyles.css"; 
 
-export default function SignedOut({signIn}) {
+function SignedOut({signedOut}) {
   return (
     <div>
-      <Menu.Item>
-        <Button primary onClick={signIn}>Giriş Yap</Button>
-        <Button primary style={{marginLeft:"0.5em"}}>Kayıt Ol</Button>
-      </Menu.Item>
+        <Button className="customButton" onClick={signedOut}>Sign in</Button>
+        <Button className="customButton">Sign up</Button>
     </div>
   );
 }
+
+export default SignedOut;

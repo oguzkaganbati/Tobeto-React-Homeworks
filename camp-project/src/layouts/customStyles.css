@@ -1,0 +1,16 @@
+.ui.customButton.button {
+    align-items: center;
+    background-color: none;
+    background: none;
+    color: #c6c6c6;
+    border:none
+    /* add more styles as needed */
+  }
+
+  .ui.customButton.button:hover{
+    color: #fff;
+    background-color: none;
+    background: none;
+    transition-duration: 0.3s;
+  }
+ 

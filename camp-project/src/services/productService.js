@@ -1,10 +1,11 @@
-import axios from "axios";
+import axios from "axios"
 
-export default class ProductService{
+
+export default class productService{
     getProducts(){
         return axios.get("https://dummyjson.com/products")
     }
-    getProductsById(productId){
+    getProductById(productId){
         return axios.get(`https://dummyjson.com/products/${productId}`)
     }
 }

@@ -1,7 +1,13 @@
 import React from "react";
-import { Dropdown, Menu, Image } from "semantic-ui-react";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  Image,
+  Menu,
+} from "semantic-ui-react";
 
-export default function SignedIn({signOut}) {
+function SignedIn({signedIn}) {
   return (
     <div>
       <Menu.Item>
@@ -9,14 +15,16 @@ export default function SignedIn({signOut}) {
           avatar
           spaced="right"
           src="https://github.com/oguzkaganbati.png"
-        />
-        <Dropdown pointing="top left" text="Oğuz Kağan">
-          <Dropdown.Menu>
-            <Dropdown.Item text="Bilgilerim" icon="info"/>
-            <Dropdown.Item onClick={signOut} text="Çıkış Yap" icon="sign-out"/>
-          </Dropdown.Menu>
+        />  
+        <Dropdown pointing="top left" text="Oğuz">
+          <DropdownMenu>
+            <DropdownItem text="My Profile"/>
+            <DropdownItem onClick={signedIn} text="Sign out"/>
+          </DropdownMenu>
         </Dropdown>
       </Menu.Item>
     </div>
   );
 }
+
+export default SignedIn;
